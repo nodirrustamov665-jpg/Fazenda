@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111116;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.restaurant-layout,
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #111116;
+  --card: #191920;
+  --text: #f5f0e8;
+  --muted: #aaa49c;
+  --border: #ffffff18;
+  --accent: #e0aa6a;
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f0e9;
+  --card: #ffffff;
+  --text: #201c18;
+  --muted: #716b64;
+  --border: #ded7cd;
+  --accent: #9c682f;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell,
+.site-header,
+.page-wrap {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.settings-card,
+.about-card,
+.offer-card {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+p {
+  color: var(--muted);
+}
+
+a,
+button {
+  transition: background-color 0.2s, color 0.2s;
+}

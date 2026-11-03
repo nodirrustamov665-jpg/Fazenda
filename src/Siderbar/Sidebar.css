@@ -1,0 +1,154 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #111116;
+  color: white;
+}
+
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  min-height: 100vh;
+  padding: 15px;
+  background: #1c1c25;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-right: 1px solid #292932;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.sidebar-logo img {
+  width: 70px;
+  border-radius: 15px;
+}
+
+.Link {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px;
+  color: #a5a5b4;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.Link:hover {
+  background: #292933;
+  color: white;
+}
+
+.Link.active {
+  background: #f4515b;
+  color: white;
+  box-shadow: 0 5px 18px #f4515b35;
+}
+
+.icon {
+  width: 25px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 30px;
+  background: #111116;
+  color: white;
+}
+
+/* Planshet va telefon */
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    z-index: 1000;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 70px;
+
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+
+    background: #1c1c25;
+    border-right: none;
+    border-top: 1px solid #292932;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .Link {
+    flex: 1;
+    min-width: 0;
+    height: 54px;
+    padding: 5px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border-radius: 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .icon {
+    width: auto;
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 18px;
+  }
+}
+
+/* Juda kichik telefonlar */
+@media (max-width: 380px) {
+  .sidebar {
+    padding: 6px;
+    gap: 2px;
+  }
+
+  .Link {
+    font-size: 10px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+}
